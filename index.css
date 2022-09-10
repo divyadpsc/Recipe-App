@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e76f51;
+}
+
+.App .App_title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.search_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(7vh, 15vh, 456px);
+  padding: 1rem;
+}
+
+.search_form .search_input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  width: clamp(25vw, 50vw, 50vw);
+  outline: none;
+  font-size: 1.5rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.search_form .search_input:focus {
+  background-color: #fff;
+}
+
+.search_form .search_button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  width: clamp(130px, 10vw, 20vw);
+  text-transform: uppercase;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 0 5px 5px 0;
+}
+
+.recipes_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+  grid-gap: 5px;
+  /* The default value of property align-items for a grid container is stretch which means each grid item will extend to the height of the grid row (to the largest item in the row if height is not set using grid-template-rows). */
+  align-items: stretch;
+
+  background-color: #fefefe;
+  /* height: 90vh; */
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem;
+}
+
+.recipe {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 1rem;
+  max-height: 100%;
+}
+
+.recipe_ingredients {
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.recipe_image {
+  border-radius: 7px;
+}
